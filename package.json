@@ -1,0 +1,34 @@
+{
+  "name": "gympass",
+  "version": "1.0.0",
+  "description": "Gympass é uma plataforma de fitness corporativo que proporciona acesso a uma rede global de academias e estúdios de fitness. Com um único plano de assinatura, os usuários podem frequentar qualquer academia ou estúdio na rede do Gympass, em várias cidades e países. A empresa tem parcerias com as empresas para oferecer o serviço como um benefício para os funcionários, com o objetivo de incentivar a saúde e o bem-estar.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/server.js",
+    "start:dev": "tsx watch src/server.ts",
+    "build": "tsup src --out-dir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kayke-Fujinaka/Gympass.git"
+  },
+  "keywords": [],
+  "author": "Kayke-Fujinaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kayke-Fujinaka/Gympass/issues"
+  },
+  "homepage": "https://github.com/Kayke-Fujinaka/Gympass#readme",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "1.2.0",
+    "@types/node": "20.2.5",
+    "tsup": "6.7.0",
+    "tsx": "3.12.7",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "dotenv": "16.0.3",
+    "fastify": "4.17.0",
+    "zod": "3.21.4"
+  }
+}
