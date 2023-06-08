@@ -3,7 +3,7 @@ import { randomUUID } from 'node:crypto'
 
 import { CheckInsRepository } from '../check-ins-repository'
 
-export class InMemoryUsersRepository implements CheckInsRepository {
+export class InMemoryCheckInRepository implements CheckInsRepository {
   public items: CheckIn[] = []
 
   async create(data: Prisma.CheckInUncheckedCreateInput): Promise<CheckIn> {
