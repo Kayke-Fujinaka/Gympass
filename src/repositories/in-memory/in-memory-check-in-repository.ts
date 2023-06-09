@@ -21,6 +21,10 @@ export class InMemoryCheckInRepository implements CheckInsRepository {
     return checkIn
   }
 
+  async findManyByUserId(userId: string): Promise<CheckIn[]> {
+    return this.items.filter((item) => item.user_id === userId)
+  }
+
   async findByUserIdOnDate(
     userId: string,
     date: Date,
