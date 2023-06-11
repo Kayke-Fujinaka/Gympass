@@ -31,6 +31,14 @@ export class InMemoryCheckInRepository implements CheckInsRepository {
       .slice((page - 1) * 20, page * 20)
   }
 
+  async findById(id: string): Promise<CheckIn | null> {
+    const checkIn = this.items.find((item) => item.id === id)
+
+    if (!checkIn) return null
+
+    return checkIn
+  }
+
   async findByUserIdOnDate(
     userId: string,
     date: Date,
