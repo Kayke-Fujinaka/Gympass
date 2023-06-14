@@ -1,7 +1,8 @@
-import { app } from '@/app'
-import { createAndAuthenticateUser } from '@/utils/test/create-and-authenticate-user'
 import request from 'supertest'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
+
+import { app } from '@/app'
+import { createAndAuthenticateUser } from '@/utils/test/create-and-authenticate-user'
 
 describe('Search Gyms (e2e)', () => {
   beforeAll(async () => {
