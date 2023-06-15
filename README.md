@@ -9,6 +9,20 @@
 - [x] Deve ser possível realizar check-in em uma academia;
 - [x] Deve ser possível validar o check-in de um usuário;
 - [x] Deve ser possível cadastrar uma academia;
+- [] Deve ser possível o usuário alterar seus dados cadastrais (e-mail, senha, etc.);
+- [] Deve ser possível o usuário recuperar sua senha através de um e-mail;
+- [] Deve ser possível o usuário desativar seu próprio perfil;
+- [] Deve ser possível para os administradores desativar um perfil de usuário;
+- [] Deve ser possível o usuário filtrar academias por tipo de atividades oferecidas (ex: yoga, pilates, musculação, etc.);
+- [] Deve ser possível o usuário visualizar o horário de funcionamento das academias;
+- [] Deve ser possível para os administradores gerenciar os horários de funcionamento das academias.
+- [] Deve ser possível o usuário avaliar as academias após o check-in;
+- [] Deve ser possível visualizar as avaliações de uma academia;
+- [] Deve ser possível o usuário visualizar os horários de pico da academia;
+- [] Deve ser possível ter planos para os usuários;
+- [] Deve ser possível enviar lembretes de renovação de planos para os usuários;
+- [] Deve ser possível o usuário visualizar seu progresso ao longo do tempo (dias em sequência de check-ins, , etc.);
+- [] Deve ser possível os administradores criarem promoções ou descontos em planos;
 
 # RNs (Regras de negócio)
 - [x] O usuário não deve poder se cadastrar com um e-mail duplicado;
@@ -17,9 +31,27 @@
 - [x] O check-in só pode ser validada até 20 minutos após ser criado;
 - [x] O check-in só pode ser validado por administradores;
 - [x] A academia só pode ser cadastrada por administradores;
+- [] O usuário não pode alterar seu e-mail para um que já esteja cadastrado;
+- [] O usuário só pode desativar seu próprio perfil;
+- [] Apenas administradores podem desativar perfis de usuário, mesmo se estes forem administradores;
+- [] A busca por tipo de atividade deve retornar apenas academias que oferecem todas as atividades pesquisadas.
+- [] O usuário só pode avaliar a academia após ter feito check-in na mesma;
+- [] Os horários de pico são calculados com base nos check-ins dos usuários;
+- [] Os lembretes de renovação de plano devem ser enviados uma semana antes do fim do plano atual;
+- [] O usuário não pode fazer um check-in sem ter um plano;
+- [] O usuário não pode fazer utilizar de recursos fora do seu plano;
+- [] As promoções ou descontos só podem ser aplicados aos planos pelos administradores;
 
 # RNFs (Requisitos não-funcionais)
- - [x] A senha do usuário precisa estar criptografada;
- - [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
- - [x] Todas listas de dados precisam estar paginadas com 20 itens por página;
- - [x] O usuário deve ser identificado por um JWT (JSON Web Token);
+- [x] A senha do usuário precisa estar criptografada;
+- [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
+- [x] Todas listas de dados precisam estar paginadas com 20 itens por página;
+- [x] O usuário deve ser identificado por um JWT (JSON Web Token);
+- [] O processo de recuperação de senha deve ser seguro e utilizar tokens de verificação únicos e temporários;
+- [] A aplicação deve ser resiliente e capaz de lidar com um grande volume de dados;
+- [] Todas as interações com o usuário devem ser rápidas e responsivas;
+- [] As senhas dos usuários não podem ser armazenadas em texto simples, devendo ser devidamente criptografadas.
+- [] As avaliações das academias devem ser publicamente visíveis para ajudar outros usuários na escolha;
+- [] As informações de progresso do usuário devem ser mantidas privadas, acessíveis apenas ao próprio usuário;
+- [] Os lembretes de renovação do plano devem ser enviados por e-mail;
+- [] O sistema deve ser capaz de suportar um grande número de usuários e academias simultaneamente.
