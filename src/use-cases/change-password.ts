@@ -26,5 +26,7 @@ export class ChangePasswordUseCase {
     if (!doesPasswordMatches) throw new InvalidCredentialsError()
 
     user.password_hash = await hash(newPassword, 6)
+
+    await this.usersRepository.save(user)
   }
 }
