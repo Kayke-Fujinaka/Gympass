@@ -12,6 +12,15 @@ export class PrismaUsersRepository implements UsersRepository {
     return user
   }
 
+  async save(user: Prisma.UserUpdateInput & Prisma.UserWhereUniqueInput) {
+    const updatedUser = await prisma.user.update({
+      where: { id: user.id },
+      data: user,
+    })
+
+    return updatedUser
+  }
+
   async findByEmail(email: string) {
     const user = await prisma.user.findUnique({ where: { email } })
 
