@@ -9,7 +9,7 @@
 - [x] Deve ser possível realizar check-in em uma academia;
 - [x] Deve ser possível validar o check-in de um usuário;
 - [x] Deve ser possível cadastrar uma academia;
-- [] Deve ser possível o usuário alterar seus dados cadastrais (e-mail, senha, etc.);
+- [x] Deve ser possível o usuário alterar sua senha;
 - [] Deve ser possível o usuário recuperar sua senha através de um e-mail;
 - [] Deve ser possível o usuário desativar seu próprio perfil;
 - [] Deve ser possível para os administradores desativar um perfil de usuário;
@@ -31,7 +31,6 @@
 - [x] O check-in só pode ser validada até 20 minutos após ser criado;
 - [x] O check-in só pode ser validado por administradores;
 - [x] A academia só pode ser cadastrada por administradores;
-- [] O usuário não pode alterar seu e-mail para um que já esteja cadastrado;
 - [] O usuário só pode desativar seu próprio perfil;
 - [] Apenas administradores podem desativar perfis de usuário, mesmo se estes forem administradores;
 - [] A busca por tipo de atividade deve retornar apenas academias que oferecem todas as atividades pesquisadas.
